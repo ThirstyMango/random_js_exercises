@@ -1,0 +1,91 @@
+:root {
+  font-size: 16px;
+  font-family: "Bitcount Prop Double Ink", system-ui;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  font-size: 1.5rem;
+  background-color: rgb(245, 249, 255);
+  min-width: 30rem;
+  min-height: 40rem;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: relative;
+}
+
+.container__caption {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.container__form {
+  position: absolute;
+  bottom: 1rem;
+}
+
+.form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.form__input {
+  border: 2px solid rgb(159, 130, 159);
+  border-radius: 0.3rem;
+  font-family: "Bitcount Prop Double Ink", system-ui;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.form__submit {
+  background-color: rgb(250, 239, 250);
+  height: 3rem;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  font-family: "Bitcount Prop Double Ink", system-ui;
+  border-radius: 0.5rem;
+  border: none;
+  transition: all 300ms ease-in-out;
+  border: 2px solid transparent;
+}
+
+.form__submit:hover {
+  background-color: white;
+  border-color: rgb(159, 130, 159);
+}
+
+.form__input::placeholder {
+  transition: all 200ms ease-in-out;
+}
+
+.form__input:focus::placeholder {
+  color: transparent;
+}
