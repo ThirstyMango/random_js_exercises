@@ -1,0 +1,28 @@
+const sumInput = function sumInput(){
+  let userInput = prompt("Enter a number to add.");
+  let totalSum = 0;
+  while (!isNaN(userInput) && userInput !== ""){
+    totalSum += +userInput;
+    userInput = prompt("Enter another number")
+  }
+  return totalSum;
+};
+
+const maxSumArray = function maxSumArray(arr){
+  if (arr.length === 0){return 0};
+ 
+  let max = arr[0];
+  for (let i = 0; i < arr.length - 1; i++){
+    arr[i + 1] += Math.max(arr[i], 0);
+    if (arr[i+1] > max){
+      max = arr[i+1];
+    }
+  };
+
+  return max;
+};
+
+const inputs = [[-1,2,3,-9],[2,-1,2,3,-9],[-1,2,3,-9,11],[-2,-1,1,2],[100,-9,2,-3,5],[1,2,3]];
+
+for (const inputArr of inputs){
+  alert(maxSumArray(inputArr));
